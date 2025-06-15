@@ -15,14 +15,15 @@ let package = Package(
             targets: ["Presentaion"]),
     ],
     dependencies: [
-        .package(path: "../Domain")
+        .package(path: "../Domain"),
+        .package(url: "https://github.com/hmlongco/Factory.git", from: "2.3.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Presentaion",
-            dependencies: ["Domain"]),
+            dependencies: ["Domain", "Factory"]),
         .testTarget(
             name: "PresentaionTests",
             dependencies: ["Presentaion"]
