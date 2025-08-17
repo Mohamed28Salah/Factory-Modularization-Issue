@@ -16,11 +16,23 @@ extension UITabBar {
         let tabBar = tabBarController.tabBar
         
         if animated {
-            UIView.animate(withDuration: 0.3) {
-                tabBar.isHidden = !visible
+            if visible {
+                // Show tab bar - slide up from bottom
+                tabBar.isHidden = false
+                tabBar.transform = CGAffineTransform(translationX: 0, y: tabBar.frame.height)
+                
+                UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut]) {
+                    tabBar.transform = .identity
+                }
+            } else {
+                UIView.animate(withDuration: 0.3) {
+                    tabBar.isHidden = true
+                    tabBar.transform = .identity // Reset transform for next show
+                }
             }
         } else {
             tabBar.isHidden = !visible
+            tabBar.transform = .identity
         }
     }
     
@@ -58,3 +70,31 @@ extension UITabBar {
         return nil
     }
 }
+//@MainActor
+//static func setVisibility(_ visible: Bool, animated: Bool = true) {
+//    guard let tabBarController = findTabBarController() else { return }
+//    let tabBar = tabBarController.tabBar
+//    
+//    if animated {
+//        if visible {
+//            // Show tab bar - slide up from bottom
+//            tabBar.isHidden = false
+//            tabBar.transform = CGAffineTransform(translationX: 0, y: tabBar.frame.height)
+//            
+//            UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseOut]) {
+//                tabBar.transform = .identity
+//            }
+//        } else {
+//            // Hide tab bar - slide down
+//            UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseIn]) {
+//                tabBar.transform = CGAffineTransform(translationX: 0, y: tabBar.frame.height)
+//            } completion: { _ in
+//                tabBar.isHidden = true
+//                tabBar.transform = .identity // Reset transform for next show
+//            }
+//        }
+//    } else {
+//        tabBar.isHidden = !visible
+//        tabBar.transform = .identity
+//    }
+//}
