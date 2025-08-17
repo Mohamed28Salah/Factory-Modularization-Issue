@@ -3,7 +3,9 @@ import Factory
 import Domain
 
 public extension Container {
-    var userRepositoryImpl: Factory<UserRepository> {
-        self { UserRepositoryImpl() }
+    static func registerRepos() {
+        Container.shared.userRepository.register {
+            UserRepositoryImpl()
+        }
     }
-} 
+}

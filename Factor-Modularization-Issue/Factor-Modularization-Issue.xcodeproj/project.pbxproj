@@ -6,11 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8AAA120B2E47EB97003170DE /* NavigationBackport in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAA120A2E47EB97003170DE /* NavigationBackport */; };
+		8AAA120E2E47F646003170DE /* Data in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAA120D2E47F646003170DE /* Data */; };
+		8AAA12102E47F649003170DE /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAA120F2E47F649003170DE /* Domain */; };
+		8AAA12122E47F64E003170DE /* Presentaion in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAA12112E47F64E003170DE /* Presentaion */; };
+		8AAA12262E47F934003170DE /* Navigation in Frameworks */ = {isa = PBXBuildFile; productRef = 8AAA12252E47F934003170DE /* Navigation */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8A3460CB2DFEB1F900685532 /* Factor-Modularization-Issue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Factor-Modularization-Issue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3460DC2DFEB22100685532 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Domain; path = ../Domain; sourceTree = SOURCE_ROOT; };
 		8A3460DD2DFEB23700685532 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Data; path = ../Data; sourceTree = SOURCE_ROOT; };
 		8A3460DE2DFEB26F00685532 /* Presentaion */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Presentaion; path = ../Presentaion; sourceTree = SOURCE_ROOT; };
+		8AAA121C2E47F7D3003170DE /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Navigation; path = ../Navigation; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +35,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AAA12102E47F649003170DE /* Domain in Frameworks */,
+				8AAA120E2E47F646003170DE /* Data in Frameworks */,
+				8AAA120B2E47EB97003170DE /* NavigationBackport in Frameworks */,
+				8AAA12122E47F64E003170DE /* Presentaion in Frameworks */,
+				8AAA12262E47F934003170DE /* Navigation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,10 +49,12 @@
 		8A3460C22DFEB1F900685532 = {
 			isa = PBXGroup;
 			children = (
+				8AAA121C2E47F7D3003170DE /* Navigation */,
 				8A3460DE2DFEB26F00685532 /* Presentaion */,
 				8A3460DD2DFEB23700685532 /* Data */,
 				8A3460DC2DFEB22100685532 /* Domain */,
 				8A3460CD2DFEB1F900685532 /* Factor-Modularization-Issue */,
+				8AAA120C2E47F646003170DE /* Frameworks */,
 				8A3460CC2DFEB1F900685532 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +65,13 @@
 				8A3460CB2DFEB1F900685532 /* Factor-Modularization-Issue.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		8AAA120C2E47F646003170DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,6 +94,11 @@
 			);
 			name = "Factor-Modularization-Issue";
 			packageProductDependencies = (
+				8AAA120A2E47EB97003170DE /* NavigationBackport */,
+				8AAA120D2E47F646003170DE /* Data */,
+				8AAA120F2E47F649003170DE /* Domain */,
+				8AAA12112E47F64E003170DE /* Presentaion */,
+				8AAA12252E47F934003170DE /* Navigation */,
 			);
 			productName = "Factor-Modularization-Issue";
 			productReference = 8A3460CB2DFEB1F900685532 /* Factor-Modularization-Issue.app */;
@@ -100,6 +128,9 @@
 			);
 			mainGroup = 8A3460C22DFEB1F900685532;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8AAA12092E47EB97003170DE /* XCRemoteSwiftPackageReference "NavigationBackport" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8A3460CC2DFEB1F900685532 /* Products */;
 			projectDirPath = "";
@@ -261,11 +292,13 @@
 				DEVELOPMENT_TEAM = 2G6563F26V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "This app needs access to your contacts to display them in a list.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -290,11 +323,13 @@
 				DEVELOPMENT_TEAM = 2G6563F26V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "This app needs access to your contacts to display them in a list.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +365,41 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8AAA12092E47EB97003170DE /* XCRemoteSwiftPackageReference "NavigationBackport" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/johnpatrickmorgan/NavigationBackport";
+			requirement = {
+				kind = exactVersion;
+				version = 0.11.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8AAA120A2E47EB97003170DE /* NavigationBackport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8AAA12092E47EB97003170DE /* XCRemoteSwiftPackageReference "NavigationBackport" */;
+			productName = NavigationBackport;
+		};
+		8AAA120D2E47F646003170DE /* Data */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Data;
+		};
+		8AAA120F2E47F649003170DE /* Domain */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Domain;
+		};
+		8AAA12112E47F64E003170DE /* Presentaion */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Presentaion;
+		};
+		8AAA12252E47F934003170DE /* Navigation */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Navigation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8A3460C32DFEB1F900685532 /* Project object */;
 }

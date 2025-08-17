@@ -3,10 +3,9 @@ import Factory
 
 public extension Container {
     var userRepository: Factory<UserRepository> {
-        self { UserRepositoryImpl() }
+        Factory(self) { fatalError("User Repo is not init") }
     }
-    
     var getUsersUseCase: Factory<GetUsersUseCase> {
-        self { DefaultGetUsersUseCase(repository: self.userRepository()) }
+        Factory(self) { DefaultGetUsersUseCase() }
     }
-} 
+}

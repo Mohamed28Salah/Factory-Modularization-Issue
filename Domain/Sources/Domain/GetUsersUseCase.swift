@@ -1,17 +1,13 @@
-import Foundation
+import Factory
 
-public protocol GetUsersUseCase: Sendable {
-    func execute() async throws -> [User]
+public protocol GetUsersUseCase {
+    func execute() -> [User]
 }
 
-public final class DefaultGetUsersUseCase: GetUsersUseCase {
-    private let repository: UserRepository
+public class DefaultGetUsersUseCase: GetUsersUseCase {
+    @Injected(\.userRepository) var repository
     
-    public init(repository: UserRepository) {
-        self.repository = repository
-    }
-    
-    public func execute() async throws -> [User] {
-        return try await repository.getUsers()
+    public func execute() -> [User] {
+        return repository.getUsers()
     }
 } 

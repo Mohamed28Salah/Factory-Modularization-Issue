@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Presentaion",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
@@ -16,6 +16,7 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Domain"),
+        .package(path: "../Navigation"),
         .package(url: "https://github.com/hmlongco/Factory.git", from: "2.3.0")
     ],
     targets: [
@@ -23,7 +24,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Presentaion",
-            dependencies: ["Domain", "Factory"]),
+            dependencies: ["Domain", "Navigation", "Factory"]),
         .testTarget(
             name: "PresentaionTests",
             dependencies: ["Presentaion"]

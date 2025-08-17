@@ -1,6 +1,6 @@
 import Foundation
 
-public struct User: Identifiable, Sendable {
+public struct User: Identifiable {
     public let id: String
     public let name: String
     public let email: String
@@ -12,7 +12,7 @@ public struct User: Identifiable, Sendable {
     }
 }
 
-public protocol UserRepository: Sendable {
-    func getUsers() async throws -> [User]
-    func getUser(id: String) async throws -> User
+public protocol UserRepository {
+    func getUsers() -> [User]
+    func getUser(id: String) -> User
 } 
