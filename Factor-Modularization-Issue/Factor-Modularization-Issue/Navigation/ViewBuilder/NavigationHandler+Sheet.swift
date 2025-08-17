@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import Navigation
-
+import Presentaion
 //MARK: - Sheet builder -
 
 extension NavRouter {
@@ -17,7 +17,7 @@ extension NavRouter {
     public func build(sheet: Sheet) -> some View {
         switch sheet {
         case .bottomSheet:
-            Text("Bottom Sheet")
+            ProductDetailsSheetView()
         }
     }
 }
