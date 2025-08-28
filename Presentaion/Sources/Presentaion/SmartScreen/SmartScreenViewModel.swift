@@ -12,7 +12,9 @@ import Foundation
 public class SmartScreenViewModel: ObservableObject {
     @Injected(\.appState) var appState: AppState
     public init() {}
-    
+    deinit {
+        
+    }
     public func goToSmartScreen(shopName: String) {
          appState.activeRouter.push(.smartScreen(name: "Shops: \(shopName)"))
      }

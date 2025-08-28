@@ -14,7 +14,9 @@ public class OnbaordingViewModel: ObservableObject {
     @Injected(\.appState) var appState: AppState
 
     public init() {}
-    
+    deinit {
+        
+    }
     public func signIn() {
         appState.currentAppStateFlow = .loggedIn
     }

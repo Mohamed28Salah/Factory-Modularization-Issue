@@ -12,7 +12,9 @@ import Navigation
 public class MerchantViewModel: ObservableObject {
     @Injected(\.appState) var appState: AppState
     public init() {}
-    
+    deinit {
+        
+    }
     public func goToShops() {
         appState.activeRouter.push(.shops)
     }

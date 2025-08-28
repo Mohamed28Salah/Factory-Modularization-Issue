@@ -14,6 +14,7 @@ public struct OnbaordingView: View {
     @StateObject var viewModel: OnbaordingViewModel = .init()
     
     public init() {}
+
     public var body: some View {
         VStack {
             Button {

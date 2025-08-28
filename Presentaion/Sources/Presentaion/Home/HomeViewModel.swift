@@ -12,10 +12,12 @@ import Navigation
 public class HomeViewModel: ObservableObject {
     @Injected(\.appState) var appState: AppState
 //    public init() {}
-    
-     public func logOut() {
-         appState.currentAppStateFlow = .onboarding
-     }
+    deinit {
+        
+    }
+    public func logOut() {
+        appState.currentAppStateFlow = .onboarding
+    }
     
     public func goToSmartScreen() {
         appState.activeRouter.push(.smartScreen(name: "Navigated from Home View"))

@@ -1,5 +1,5 @@
 {
-  "originHash" : "a45d1dc35fca12b071aab54ef100cff1c67c6c5db83cfa78c558d415445fedc4",
+  "originHash" : "3a74c1055ef337e552e54e3de17f81cdde01f50a7aa2a5437df23dd876240897",
   "pins" : [
     {
       "identity" : "factory",
@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/johnpatrickmorgan/NavigationBackport",
       "state" : {
-        "revision" : "5a966a6010dcc6575a1931ca577b8ab19008166d",
-        "version" : "0.11.3"
+        "revision" : "5baf99855f6a0a02022f9b479cc41ad99a8e070c",
+        "version" : "0.11.5"
       }
     }
   ],

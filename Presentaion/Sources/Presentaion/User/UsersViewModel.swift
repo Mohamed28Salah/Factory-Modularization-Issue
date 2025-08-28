@@ -11,12 +11,15 @@ public class UsersViewModel: ObservableObject {
     @Published var error: Error?
 //    public init() {}
     
-     public func loadUsers() {
-         isLoading = true
-         error = nil
-         users = getUsersUseCase.execute()
-         isLoading = false
-     }
+    deinit {
+        
+    }
+    public func loadUsers() {
+        isLoading = true
+        error = nil
+        users = getUsersUseCase.execute()
+        isLoading = false
+    }
     
     public func goToShops() {
         appState.activeRouter.push(.shops)
